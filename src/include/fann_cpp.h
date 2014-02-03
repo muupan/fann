@@ -854,7 +854,7 @@ public:
 	    See also:
 	    		<copy_from_struct_fann>
         */
-	neural_net(const neural_net& other)
+	neural_net(const neural_net& other) : ann(NULL)
 	{
 	    copy_from_struct_fann(other.ann);
 	}
@@ -866,7 +866,7 @@ public:
 	   See also:
 	    		<copy_from_struct_fann>
         */
-	neural_net(struct fann* other)
+	neural_net(struct fann* other) : ann(NULL)
 	{
 	    copy_from_struct_fann(other);
 	}
